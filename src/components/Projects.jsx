@@ -45,7 +45,7 @@ export const Projects = () => {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" defaultActiveKey='/home'>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab 1 active</Nav.Link>
+                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="second">Tab 2</Nav.Link>
