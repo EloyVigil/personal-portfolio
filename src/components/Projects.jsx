@@ -4,6 +4,8 @@ import colorSharp2 from '../views/img/color-sharp2.png';
 import projImg1 from '../views/img/project-img1.png';
 import projImg2 from '../views/img/project-img2.png';
 import projImg3 from '../views/img/project-img3.png';
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 export const Projects = () => {
 
@@ -45,8 +47,13 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>Projects</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, libero. Officia voluptates atque ab, porro aliquam inventore ipsum minima a rem eius ea deleniti tempore cumque, sequi labore enim eligendi.</p>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+                                    <h2>Projects</h2>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, libero. Officia voluptates atque ab, porro aliquam inventore ipsum minima a rem eius ea deleniti tempore cumque, sequi labore enim eligendi.</p>
+                                </div>}
+                        </TrackVisibility>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center' id='pills-tab'>
                                 <Nav.Item>
@@ -68,7 +75,7 @@ export const Projects = () => {
                                                     <ProjectCard
                                                         key={index}
                                                         {...project}
-                                                        />
+                                                    />
                                                 )
                                             })
                                         }
