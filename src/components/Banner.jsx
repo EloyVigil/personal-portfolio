@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from '../views/img/header-img.svg';
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 export const Banner = () => {
 
@@ -16,7 +18,7 @@ export const Banner = () => {
         let ticker = setInterval(() => {
             tick();
         }, delta)
-        return () => { clearInterval(ticker)};
+        return () => { clearInterval(ticker) };
     }, [text])
 
     const tick = () => {
@@ -46,10 +48,15 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className='tagline'>Welcome to the best portfolio</span>
-                        <h1>{`Hi I'm Eloy Vigil a `}<br/><span className='wrap'>{ text }</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam molestias, quae dolorem, culpa totam minima aliquid distinctio, debitis quos accusantium consequuntur eaque impedit omnis dolorum at autem. Vel, facilis quam.</p>
-                        <button onClick={() => console.log('Connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                        <TrackVisibility>
+                        {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                <span className='tagline'>Welcome to the best portfolio</span>
+                                <h1>{`Hi I'm Eloy Vigil a `}<br /><span className='wrap'>{text}</span></h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam molestias, quae dolorem, culpa totam minima aliquid distinctio, debitis quos accusantium consequuntur eaque impedit omnis dolorum at autem. Vel, facilis quam.</p>
+                                <button onClick={() => console.log('Connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                            </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt='Space Man' />
