@@ -1,11 +1,12 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import meter1 from '../views/img/meter1.svg';
 import meter2 from '../views/img/meter2.svg';
 import meter3 from '../views/img/meter3.svg';
 import colorSharp from '../views/img/color-sharp.png';
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 export const Skills = () => {
 
@@ -34,8 +35,13 @@ export const Skills = () => {
                 <Row>
                     <Col>
                         <div className='skill-bx'>
-                            <h2>Skills</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ut ipsam neque minima non nisi molestiae natus molestias? Dolores temporibus ipsa distinctio. Dolore eum dicta, provident voluptatum qui eveniet. Officiis?</p>
+                            <TrackVisibility>
+                                {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+                                        <h2>Skills</h2>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ut ipsam neque minima non nisi molestiae natus molestias? Dolores temporibus ipsa distinctio. Dolore eum dicta, provident voluptatum qui eveniet. Officiis?</p>
+                                    </div>}
+                            </TrackVisibility>
                             <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                                 <div className='item'>
                                     <img src={meter1} alt="Meter" />
