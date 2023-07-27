@@ -1,12 +1,12 @@
+import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 import meter1 from '../views/img/meter1.svg';
 import meter2 from '../views/img/meter2.svg';
 import meter3 from '../views/img/meter3.svg';
 import colorSharp from '../views/img/color-sharp.png';
-import TrackVisibility from 'react-on-screen';
-import 'animate.css';
 
 export const Skills = () => {
 
