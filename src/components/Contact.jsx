@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../views/img/contact-img.svg';
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 export const Contact = () => {
-    
+
     const formInitialDetails = {
         firstName: "",
         lastName: "",
@@ -37,12 +39,12 @@ export const Contact = () => {
         let result = response.json();
         setFormDetails(formInitialDetails);
         if (result.code === 200) {
-            setStatus({success: true, message: 'Message sent successfully!'});
+            setStatus({ success: true, message: 'Message sent successfully!' });
         } else {
-            setStatus({success: false, message: 'Something went wrong, please try again later'});
+            setStatus({ success: false, message: 'Something went wrong, please try again later' });
         }
     };
-    
+
     return (
         <section className='contact' id='connect'>
             <Container>
@@ -51,20 +53,25 @@ export const Contact = () => {
                         <img src={contactImg} alt="Contact Us" />
                     </Col>
                     <Col md={6}>
-                        <h2>Get In Touch</h2>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+                                    <h2>Get In Touch</h2>
+                                </div>}
+                        </TrackVisibility>
                         <form onSubmit={handleSubmit}>
                             <Row>
                                 <Col sm={6} className='px-1'>
-                                    <input type="text" value={formDetails.firstName} placeholder='First Name' onChange={(e) => onFormUpdate('firstName', e.target.value)}/>
+                                    <input type="text" value={formDetails.firstName} placeholder='First Name' onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                                 </Col>
                                 <Col sm={6} className='px-1'>
-                                    <input type="text" value={formDetails.lastName} placeholder='Last Name' onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                                    <input type="text" value={formDetails.lastName} placeholder='Last Name' onChange={(e) => onFormUpdate('lastName', e.target.value)} />
                                 </Col>
                                 <Col sm={6} className='px-1'>
-                                    <input type="email" value={formDetails.email} placeholder='Email Address' onChange={(e) => onFormUpdate('email', e.target.value)}/>
+                                    <input type="email" value={formDetails.email} placeholder='Email Address' onChange={(e) => onFormUpdate('email', e.target.value)} />
                                 </Col>
                                 <Col sm={6} className='px-1'>
-                                    <input type="tel" value={formDetails.lastName} placeholder='Phone No.' onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                                    <input type="tel" value={formDetails.lastName} placeholder='Phone No.' onChange={(e) => onFormUpdate('phone', e.target.value)} />
                                 </Col>
                                 <Col>
                                     <textarea row="6" value={formDetails.message} placeholder='Message' onChange={(e) => onFormUpdate('message', e.target.value)} />
