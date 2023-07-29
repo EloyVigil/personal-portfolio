@@ -60,6 +60,66 @@ export const Skills = () => {
                                     <img src={meter3} alt="Meter" />
                                     <h5>Logo Design</h5>
                                 </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={meter3} alt="Meter" />
+                                    <h5>Logo Design</h5>
+                                </div>
                             </Carousel>
                         </div>
                     </Col>
