@@ -3,8 +3,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
-import meter1 from '../views/img/meter1.svg';
-import meter2 from '../views/img/meter2.svg';
+import java from '../views/img/java-vertical.svg';
+import javascript from '../views/img/javascript.svg';
+import python from '../views/img/python.svg';
 import meter3 from '../views/img/meter3.svg';
 import colorSharp from '../views/img/color-sharp.png';
 
@@ -44,20 +45,20 @@ export const Skills = () => {
                             </TrackVisibility>
                             <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                                 <div className='item'>
-                                    <img src={meter1} alt="Meter" />
-                                    <h5>Web Development</h5>
+                                    <img src={java} alt="Java" />
+                                    <h5>Java 8</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter2} alt="Meter" />
-                                    <h5>Brand Identity</h5>
+                                    <img src={javascript} alt="JavaScript" />
+                                    <h5>JavaScript</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={python} alt="Meter" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
                                     <img src={meter3} alt="Meter" />
                                     <h5>Logo Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={meter1} alt="Meter" />
-                                    <h5>Web Development</h5>
                                 </div>
                             </Carousel>
                         </div>
