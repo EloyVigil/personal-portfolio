@@ -6,7 +6,10 @@ import 'animate.css';
 import java from '../views/img/java-vertical.svg';
 import javascript from '../views/img/javascript.svg';
 import python from '../views/img/python.svg';
-import meter3 from '../views/img/meter3.svg';
+import mysql from '../views/img/mysql.svg';
+import mongodb from '../views/img/mongodb.svg';
+import flask from '../views/img/flask.svg';
+
 import colorSharp from '../views/img/color-sharp.png';
 
 export const Skills = () => {
@@ -53,72 +56,48 @@ export const Skills = () => {
                                     <h5>JavaScript</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={python} alt="Meter" />
+                                    <img src={python} alt="Python" />
                                     <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={mysql} alt="MySQL" />
+                                    <h5>MySQL DB</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={mongodb} alt="MongoDB" />
+                                    <h5>MongoDB</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={flask} alt="Flask" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={python} alt="Python" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={python} alt="Python" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={python} alt="Python" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={python} alt="Python" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={python} alt="Python" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={python} alt="Python" />
+                                    <h5>Python 3</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={meter3} alt="Meter" />
-                                    <h5>Logo Design</h5>
+                                    <img src={python} alt="Python" />
+                                    <h5>Python 3</h5>
                                 </div>
                             </Carousel>
                         </div>
