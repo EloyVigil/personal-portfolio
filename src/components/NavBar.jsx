@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../views/img/logo.svg';
-import navIcon1 from '../views/img/nav-icon1.svg';
-import navIcon2 from '../views/img/nav-icon2.svg';
-import navIcon3 from '../views/img/nav-icon3.svg';
+import logo from '../views/img/logo.png';
+import linkedin from '../views/img/linkedin.svg';
+import github from '../views/img/github-white.svg';
+import hackerrank from '../views/img/hackerrank.png';
+import leetcode from '../views/img/leetcode.png';
 
 export const NavBar = () => {
 
@@ -45,9 +46,10 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="#"><img src={ navIcon1 } alt="LinkenIn" /></a>
-                            <a href="#"><img src={ navIcon2 } alt="" /></a>
-                            <a href="#"><img src={ navIcon3 } alt="" /></a>
+                            <a href="https://www.linkedin.com/in/eloy-vigil/"><img src={ linkedin } alt="LinkenIn" /></a>
+                            <a href="https://github.com/EloyVigil"><img src={ github } alt="GitHub" /></a>
+                            <a href="https://leetcode.com/eloyvigil007/"><img src={ leetcode } alt="Leet Code" /></a>
+                            <a href="https://www.hackerrank.com/eloyjvigil?hr_r=1"><img src={ hackerrank } alt="Hacker Rank" /></a>
                         </div>
                     </span>
                 </Navbar.Collapse>
