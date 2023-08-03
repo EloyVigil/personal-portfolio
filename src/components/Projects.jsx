@@ -1,44 +1,47 @@
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 import { ProjectCard } from './ProjectCard';
 import colorSharp2 from '../views/img/color-sharp2.png';
-import projImg1 from '../views/img/project-img1.png';
-import projImg2 from '../views/img/project-img2.png';
-import projImg3 from '../views/img/project-img3.png';
+import login from '../views/img/movielogin.png';
+import homepage from '../views/img/moviehp.png';
+import details from '../views/img/detailspage.png';
+import results from '../views/img/searchresults.png';
+import trending from '../views/img/trendingpage.png';
+import watchlist from '../views/img/watchlist.png';
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 
 export const Projects = () => {
 
-    const projects = [
+    const javaProject = [
         {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
+            title: "Login Page",
+            description: "Login to use features like watchlist and leave reviews",
+            imgUrl: login,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg2,
+            title: "Home Page",
+            description: "Dashboard of Top Rated and Now Showing Movies",
+            imgUrl: homepage,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg3,
+            title: "Trending",
+            description: "Most popular movies with pop-up description when mouse hovers over",
+            imgUrl: trending,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
+            title: "Watch List",
+            description: "Personal watchlist saved to the database",
+            imgUrl: watchlist,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg2,
+            title: "Search Results",
+            description: "List of movies and the descriptions ordered by best match",
+            imgUrl: results,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg3,
+            title: "Movie Details",
+            description: "Overview, Cast, Budget, Trailers and similar movie recommendations...",
+            imgUrl: details,
         }
     ];
 
@@ -57,7 +60,7 @@ export const Projects = () => {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center' id='pills-tab'>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                    <Nav.Link eventKey="first">Java + MySQL</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="second">Tab 2</Nav.Link>
@@ -70,11 +73,11 @@ export const Projects = () => {
                                 <Tab.Pane eventKey="first">
                                     <Row>
                                         {
-                                            projects.map((project, index) => {
+                                            javaProject.map((javaProject, index) => {
                                                 return (
                                                     <ProjectCard
                                                         key={index}
-                                                        {...project}
+                                                        {...javaProject}
                                                     />
                                                 )
                                             })
