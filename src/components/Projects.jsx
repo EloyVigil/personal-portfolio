@@ -63,10 +63,10 @@ export const Projects = () => {
                                     <Nav.Link eventKey="first">Java + MySQL</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                    <Nav.Link eventKey="second">Python</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                    <Nav.Link eventKey="third">JavaScript</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                             <Tab.Content>
