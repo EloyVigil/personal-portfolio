@@ -45,6 +45,72 @@ export const Projects = () => {
         }
     ];
 
+    const pythonProject = [
+        {
+            title: "Login Page",
+            description: "Login to use features like watchlist and leave reviews",
+            imgUrl: login,
+        },
+        {
+            title: "Home Page",
+            description: "Dashboard of Top Rated and Now Showing Movies",
+            imgUrl: homepage,
+        },
+        {
+            title: "Trending",
+            description: "Most popular movies with pop-up description when mouse hovers over",
+            imgUrl: trending,
+        },
+        {
+            title: "Watch List",
+            description: "Personal watchlist saved to the database",
+            imgUrl: watchlist,
+        },
+        {
+            title: "Search Results",
+            description: "List of movies and the descriptions ordered by best match",
+            imgUrl: results,
+        },
+        {
+            title: "Movie Details",
+            description: "Overview, Cast, Budget, Trailers and similar movie recommendations...",
+            imgUrl: details,
+        }
+    ];
+
+    const javascriptProject = [
+        {
+            title: "Login Page",
+            description: "Login to use features like watchlist and leave reviews",
+            imgUrl: login,
+        },
+        {
+            title: "Home Page",
+            description: "Dashboard of Top Rated and Now Showing Movies",
+            imgUrl: homepage,
+        },
+        {
+            title: "Trending",
+            description: "Most popular movies with pop-up description when mouse hovers over",
+            imgUrl: trending,
+        },
+        {
+            title: "Watch List",
+            description: "Personal watchlist saved to the database",
+            imgUrl: watchlist,
+        },
+        {
+            title: "Search Results",
+            description: "List of movies and the descriptions ordered by best match",
+            imgUrl: results,
+        },
+        {
+            title: "Movie Details",
+            description: "Overview, Cast, Budget, Trailers and similar movie recommendations...",
+            imgUrl: details,
+        }
+    ];
+
     return (
         <section className="project" id="project">
             <Container>
@@ -60,7 +126,7 @@ export const Projects = () => {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center' id='pills-tab'>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Java + MySQL</Nav.Link>
+                                    <Nav.Link eventKey="first">Java</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="second">Python</Nav.Link>
@@ -71,6 +137,9 @@ export const Projects = () => {
                             </Nav>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
+                                    <Row>
+                                        <h3>Java </h3>
+                                    </Row>
                                     <Row>
                                         {
                                             javaProject.map((javaProject, index) => {
@@ -84,8 +153,34 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">Random Words</Tab.Pane>
-                                <Tab.Pane eventKey="third">More Random Words</Tab.Pane>
+                                <Tab.Pane eventKey="second">
+                                    <Row>
+                                        {
+                                            pythonProject.map((pythonProject, index) => {
+                                                return(
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...pythonProject}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="third">
+                                <Row>
+                                        {
+                                            javascriptProject.map((javascriptProject, index) => {
+                                                return(
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...javascriptProject}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                                </Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
