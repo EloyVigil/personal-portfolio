@@ -42,26 +42,33 @@ export const Banner = () => {
         }
     }
 
-    return (
-        <section className="banner" id="home">
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                        <TrackVisibility>
-                        {({ isVisible }) =>
-                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                <span className='tagline'>Welcome to the best portfolio</span>
-                                <h1>{`Hi I'm Eloy Vigil a `}<br /><span className='wrap'>{text}</span></h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam molestias, quae dolorem, culpa totam minima aliquid distinctio, debitis quos accusantium consequuntur eaque impedit omnis dolorum at autem. Vel, facilis quam.</p>
-                                <button onClick={() => console.log("Working")}>Let's Connect <ArrowRightCircle size={25} /></button>
-                            </div>}
-                        </TrackVisibility>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt='Space Man' />
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-    )
-}
+    const scrollToBottom = () => {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    };
+
+        return (
+            <section className="banner" id="home">
+                <Container>
+                    <Row className="align-items-center">
+                        <Col xs={12} md={6} xl={7}>
+                            <TrackVisibility>
+                                {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                        <span className='tagline'>Welcome to the best portfolio</span>
+                                        <h1>{`Hi I'm Eloy Vigil a `}<br /><span className='wrap'>{text}</span></h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam molestias, quae dolorem, culpa totam minima aliquid distinctio, debitis quos accusantium consequuntur eaque impedit omnis dolorum at autem. Vel, facilis quam.</p>
+                                        <button onClick={scrollToBottom}>Let's Connect <ArrowRightCircle size={25} /></button>
+                                    </div>}
+                            </TrackVisibility>
+                        </Col>
+                        <Col xs={12} md={6} xl={5}>
+                            <img src={headerImg} alt='Space Man' />
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+        )
+    }
