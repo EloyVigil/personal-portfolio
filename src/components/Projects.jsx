@@ -120,7 +120,7 @@ export const Projects = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                                     <h2>Projects</h2>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, libero. Officia voluptates atque ab, porro aliquam inventore ipsum minima a rem eius ea deleniti tempore cumque, sequi labore enim eligendi.</p>
+                                    <p>These are a couple of my recent projects take a look.</p>
                                 </div>}
                         </TrackVisibility>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -155,9 +155,12 @@ export const Projects = () => {
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                     <Row>
+                                        <h3>Python</h3>
+                                    </Row>
+                                    <Row>
                                         {
                                             pythonProject.map((pythonProject, index) => {
-                                                return(
+                                                return (
                                                     <ProjectCard
                                                         key={index}
                                                         {...pythonProject}
@@ -168,10 +171,13 @@ export const Projects = () => {
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
-                                <Row>
+                                    <Row>
+                                        <h3>JavaScript</h3>
+                                    </Row>
+                                    <Row>
                                         {
                                             javascriptProject.map((javascriptProject, index) => {
-                                                return(
+                                                return (
                                                     <ProjectCard
                                                         key={index}
                                                         {...javascriptProject}
